@@ -1,1 +1,44 @@
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4f8fc;
+}
 
+header {
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.hero {
+    background: #e6f2fb;
+    padding: 40px;
+    text-align: center;
+}
+
+.content {
+    padding: 20px;
+}
+
+input, textarea {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+}
+
+button {
+    padding: 10px;
+    background: #2a7de1;
+    color: white;
+    border: none;
+}
