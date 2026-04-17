@@ -18,17 +18,17 @@ nav a{
     color:#333;
 }
 
-.hero{
+hero{
     background:#e6f2fb;
     padding:40px;
     text-align:center;
 }
 
-.content{
+content{
     padding:20px;
 }
 
-input, textarea{
+input,textarea{
     display:block;
     margin:10px 0;
     padding:8px;
