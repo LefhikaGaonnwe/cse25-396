@@ -1,44 +1,184 @@
-body{
-    font-family:Arial;
-    margin:0;
-    background:#f4f8fc;
+body {
+  background: #f4f8fb;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header{
-    background:white;
-    padding:15px;
-    display:flex;
-    justify-content:space-between;
-    border-bottom:1px solid#ddd;
+h1, h4, h5 {
+  color: #1b4b6b;
 }
 
-nav a{
-    margin:0 10px;
-    text-decoration:none;
-    color:#333;
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  background: #ffffff;
 }
 
-hero{
-    background:#e6f2fb;
-    padding:40px;
-    text-align:center;
+.nav-link {
+  color: #333;
+  transition: 0.3s;
 }
 
-content{
-    padding:20px;
+.nav-link:hover {
+  color: #0d6efd;
 }
 
-input,textarea{
-    display:block;
-    margin:10px 0;
-    padding:8px;
-    width:100%;
-    max-width:400px;
+.nav-link.active {
+  color: #0d6efd !important;
+  font-weight: 600;
 }
 
-button{
-    padding:10px;
-    background:#2a7de1;
-    color:white;
-    border:none;
+/* =========================
+   HERO SECTION (HOME)
+========================= */
+.hero {
+  background: linear-gradient(to right, #d9ecf7, #cfe8f6);
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-weight: 700;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-primary {
+  background-color: #0d6efd;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+}
+
+/* =========================
+   SERVICE CARDS (HOME)
+========================= */
+.service-card {
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  background: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   PRODUCT CARDS (HOME + PURCHASE)
+========================= */
+.product-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.price {
+  font-weight: bold;
+  color: #1b4b6b;
+}
+
+/* =========================
+   FORMS / INPUTS
+========================= */
+.form-control,
+.form-select {
+  border-radius: 8px;
+}
+
+/* =========================
+   BOOKING SECTION (PURCHASE)
+========================= */
+.booking {
+  background: #eef5fa;
+  border-top: 1px solid #ddd;
+}
+
+.booking h5 {
+  font-weight: 600;
+}
+
+/* =========================
+   SEARCH BOX (HISTORY)
+========================= */
+.search-box {
+  width: 250px;
+  border-radius: 8px;
+}
+
+/* =========================
+   FILTER BOX (HISTORY)
+========================= */
+.filter-box {
+  background: #eef5fa;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* =========================
+   TABLE (HISTORY)
+========================= */
+.custom-table {
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.custom-table thead {
+  background: #e6f0f7;
+}
+
+.custom-table th {
+  font-weight: 600;
+}
+
+.custom-table td {
+  vertical-align: middle;
+}
+
+/* =========================
+   STATUS COLORS
+========================= */
+.status.completed {
+  color: #28a745;
+  font-weight: 600;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #e6f0f7;
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE TWEAKS
+========================= */
+@media (max-width: 768px) {
+  .search-box {
+    width: 100%;
+  }
+
+  .hero {
+    text-align: center;
+  }
 }
