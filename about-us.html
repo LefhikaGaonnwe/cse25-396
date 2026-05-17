@@ -1,37 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>About Us</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>About Us</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Combined CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
+
 <body>
 
-<header>
-    <h2>MediCraft</h2>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="purchases.html">Purchase</a>
-        <a href="purchases-history.html">Purchase History</a>
-        <a href="about-us.html">About Us</a>
-        <a href="contact.html">Contact</a>
-        <a href="feedback.html">Feedback</a>
-    </nav>
-</header>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container">
 
-<section class="content">
-    <h2>About Us</h2>
-    <p>MediCraft (Pty) Ltd is a 100% citizen-owned diagnostic solutions powerhouse headquartered in Gaborone, Botswana. Established and led by a US-trained Biomedical Engineer with over 20 years of experience at industry leaders Roche and Orthosurge, MediCraft is the authorized partner for Abbott Diagnostics in Botswana. We provide a full-service "Reagent Placement Model," delivering the world’s most advanced Alinity platforms backed by a local guarantee of technical sovereignty.</p>
-    <h2>STRATEGIC IDENTITY</h2>
-    <p>•	Vision: To create a future where no Motswana waits for a life-critical result, realized through a self-reliant diagnostic network that sets the global benchmark for reliability and citizen-led engineering.</p>
-    <p>•	Mission: MediCraft: Precision Technology. Local Expertise. National Health.</p>
-    <p>•	Tagline: Diagnostics in Trusted Hands.</p>
-    <h2>THE MEDICRAFT ADVANTAGE</h2>
-    <p>•	Technical Sovereignty: Unlike competitors who rely on foreign engineering support, MediCraft’s leadership and field teams are Gaborone-based, providing "first-call" resolution and 24-hour response times.</p>
-    <p>•	Citizen Empowerment: As a 100% citizen-owned entity, we prioritize local talent and align perfectly with Botswana’s 2026 Economic Diversification Drive (EDD) and procurement preferences.</p>
-    <p>•	Clinical Insight: Our leadership’s deep experience with legacy Roche systems allows us to identify and bridge gaps in current diagnostic workflows.</p>
-    
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-heart-pulse-fill text-primary"></i>
+      LOGO
+    </a>
+
+    <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="purchase.html">Purchase</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="history.html">History</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">Feedback</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </div>
+</nav>
+
+<!-- ABOUT SECTION -->
+<section class="about-section py-5">
+
+  <div class="container">
+
+    <!-- TOP AREA -->
+    <div class="about-card">
+
+      <div class="row align-items-center g-4">
+
+        <!-- TEXT -->
+        <div class="col-lg-6">
+
+          <h1 class="about-title mb-4">
+            About Our Company
+          </h1>
+
+          <div class="about-content">
+
+            <h4>Our Mission</h4>
+
+            <p>
+              Our charity fund medical equipment solutions.
+              Committed quality & quality care.
+            </p>
+
+            <hr>
+
+            <h4>Our Vision</h4>
+
+            <p>
+              Our implants message capability and doctors
+              trust your responsible solutions.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- IMAGE -->
+        <div class="col-lg-6 text-center">
+
+          <img
+            src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=1200&auto=format&fit=crop"
+            alt="Doctors"
+            class="img-fluid about-image">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SERVICES -->
+    <div class="services-card mt-4">
+
+      <div class="row align-items-center g-4">
+
+        <!-- TEXT -->
+        <div class="col-lg-6">
+
+          <h3 class="services-title">
+            Our Services
+          </h3>
+
+          <p>
+            Our medical services include equipment supply,
+            maintenance, installation and healthcare support
+            for hospitals and clinics.
+          </p>
+
+          <button class="btn btn-primary learn-btn">
+            Learn More About Us
+          </button>
+
+        </div>
+
+        <!-- IMAGE -->
+        <div class="col-lg-6 text-center">
+
+          <img
+            src="https://images.unsplash.com/photo-1612277795421-9bc7706a4a41?q=80&w=1200&auto=format&fit=crop"
+            alt="Medical Team"
+            class="img-fluid services-image">
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
+
+<!-- FOOTER -->
+<footer class="footer text-center py-3">
+
+  <div class="container">
+
+    <small>
+      Contact Info |
+      Follow Us |
+      © 2022 YourCompany
+    </small>
+
+  </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
