@@ -182,3 +182,36 @@ h1, h4, h5 {
     text-align: center;
   }
 }
+
+/* =========================
+   ACTIVE STAR
+========================= */
+
+.active-star {
+  color: #ff9800 !important;
+}
+
+/* =========================
+   SCROLL TOP BUTTON
+========================= */
+
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.scroll-top-btn:hover {
+  background: #0b5ed7;
+}
