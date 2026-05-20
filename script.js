@@ -81,12 +81,12 @@ window.addEventListener("load", () => {
 ========================= */
 
 const products = {
-  "Digital Thermometer": 55.05,
-  "Patient Monitor": 35.05,
-  "Mobility Walker": 30.05,
-  "Heart Monitor": 65.00,
-  "Hospital Bed": 250.00,
-  "Wheelchair": 120.00
+  "Digital Thermometer": 250.00,
+  "Patient Monitor": 6500.00,
+  "Mobility Walker": 950.00,
+  "Heart Monitor": 5365.00,
+  "Hospital Bed": 3250.00,
+  "Wheelchair": 720.00
 };
 
 /* =========================
