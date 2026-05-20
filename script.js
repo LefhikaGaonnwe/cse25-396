@@ -1,32 +1,4 @@
 /* =========================
-    alert("Feedback submitted successfully!");
-
-    feedbackForm.reset();
-
-    stars.forEach(star => {
-      star.classList.remove("active-star");
-    });
-  });
-}
-
-/* =========================
-   CONTACT FORM VALIDATION
-========================= */
-
-const contactForm = document.querySelector(".message-section form");
-
-if (contactForm) {
-
-  contactForm.addEventListener("submit", (e) => {
-
-    e.preventDefault();
-
-    const name = contactForm.querySelector("input").value.trim();
-    const message = contactForm.querySelector("textarea").value.trim();
-
-    if (name === "" || message === "") {
-      alert("Please complete all fields.");
-      return;
     }
 
     alert("Message sent successfully!");
@@ -36,15 +8,34 @@ if (contactForm) {
 }
 
 /* =========================
-   HISTORY PAGE FILTER
+   ABOUT PAGE BUTTON
 ========================= */
 
-const filterButton = document.querySelector(".btn-primary");
+const learnMoreBtn = document.querySelector(".learn-btn");
 
-if (filterButton && document.querySelector(".custom-table")) {
+if (learnMoreBtn) {
 
-  filterButton.addEventListener("click", () => {
-    alert("Filtering records...");
+  learnMoreBtn.addEventListener("click", () => {
+
+    alert("Thank you for learning more about our company!");
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
+
+/* =========================
+   FOOTER LINKS
+========================= */
+
+const footer = document.querySelector(".footer");
+
+if (footer) {
+
+  footer.addEventListener("click", () => {
+    window.location.href = "contact.html";
   });
 }
 
@@ -74,4 +65,12 @@ scrollButton.addEventListener("click", () => {
     top: 0,
     behavior: "smooth"
   });
+});
+
+/* =========================
+   PAGE LOAD ANIMATION
+========================= */
+
+window.addEventListener("load", () => {
+  document.body.classList.add("loaded");
 });
