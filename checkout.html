@@ -1,0 +1,152 @@
+# 📄 checkout.html
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Checkout</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg shadow-sm">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="index.html">
+      <i class="bi bi-heart-pulse-fill text-primary"></i>
+      LOGO
+    </a>
+
+    <button class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navMenu">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="purchase.html">Purchase</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="history.html">History</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="feedback.html">Feedback</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- CHECKOUT SECTION -->
+<section class="checkout-section py-5">
+
+  <div class="container">
+
+    <div class="checkout-container">
+
+      <h2 class="checkout-title mb-4 text-center">
+        Checkout Summary
+      </h2>
+
+      <!-- TABLE -->
+      <div class="table-responsive">
+
+        <table class="table checkout-table align-middle">
+
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="checkout-items">
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+      <!-- TOTAL -->
+      <div class="checkout-summary text-end mt-4">
+
+        <h4>
+          Grand Total: <span id="grand-total">$0.00</span>
+        </h4>
+
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="d-flex justify-content-between flex-wrap gap-3 mt-4">
+
+        <a href="purchase.html"
+          class="btn btn-outline-primary add-more-btn">
+          Add More Products
+        </a>
+
+        <button class="btn btn-primary confirm-btn"
+          id="confirm-order-btn">
+          Confirm Order
+        </button>
+
+      </div>
+
+      <!-- SUCCESS MESSAGE -->
+      <div class="alert alert-success mt-4 d-none"
+        id="success-message">
+
+        Your order has been sent successfully to the business.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
