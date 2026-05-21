@@ -85,7 +85,7 @@ h1, h4, h5 {
 }
 
 .product-card img {
-  width: 300px;
+  width: 100%;
   height: auto;
   object-fit: cover;
   border-radius: 10px;
