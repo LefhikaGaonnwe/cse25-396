@@ -73,7 +73,16 @@ h1, h4, h5 {
    PRODUCT IMAGES FIX
 ========================= */
 
+.product-container{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
 .product-card {
+  flex: 1;
   background: #ffffff;
   border-radius: 12px;
   padding: 15px;
@@ -82,6 +91,7 @@ h1, h4, h5 {
   transition: 0.3s;
   overflow: hidden;
   height: 100%;
+  max-width: 300px
 }
 
 .product-card img {
