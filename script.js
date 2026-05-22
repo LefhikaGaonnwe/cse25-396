@@ -305,3 +305,57 @@ if (confirmOrderBtn) {
     }, 3000);
   });
 }
+
+/* ==================================================
+   12. DISPLAY ORDER HISTORY
+================================================== */
+
+const historyTable =
+  document.getElementById("history-table-body");
+
+if (historyTable) {
+
+  const orders =
+    JSON.parse(localStorage.getItem("orders")) || [];
+
+  historyTable.innerHTML = "";
+
+  orders.forEach(order => {
+
+    let products = "";
+
+    order.items.forEach(item => {
+
+      products += `
+        ${item.name} x${item.quantity}<br>
+      `;
+    });
+
+    historyTable.innerHTML += `
+
+      <tr>
+
+        <td>#${order.id}</td>
+
+        <td>
+          ${products}
+        </td>
+
+        <td>P${order.total.toFixed(2)}</td>
+
+        <td>${order.date}</td>
+
+        <td>
+
+          <span class="badge bg-success">
+
+            ${order.status}
+
+          </span>
+
+        </td>
+
+      </tr>
+    `;
+  });
+}
