@@ -1,13 +1,4 @@
 /* =========================
-    }
-
-    alert("Message sent successfully!");
-
-    contactForm.reset();
-  });
-}
-
-/* =========================
    ABOUT PAGE BUTTON
 ========================= */
 
@@ -75,7 +66,6 @@ window.addEventListener("load", () => {
   document.body.classList.add("loaded");
 });
 
-```javascript
 /* =========================
    PRODUCT DATABASE
 ========================= */
@@ -84,7 +74,7 @@ const products = {
   "Digital Thermometer": 250.00,
   "Patient Monitor": 6500.00,
   "Mobility Walker": 950.00,
-  "Heart Monitor": 5365.00,
+  "Heart Monitor": 6500.00,
   "Hospital Bed": 3250.00,
   "Wheelchair": 720.00
 };
@@ -116,8 +106,11 @@ buyNowButtons.forEach(button => {
       const existingProduct = cart.find(item => item.name === productName);
 
       if (existingProduct) {
+
         existingProduct.quantity += 1;
+
       } else {
+
         cart.push({
           name: productName,
           price: productPrice,
@@ -157,10 +150,13 @@ function renderCheckout() {
 
     checkoutItems.innerHTML += `
       <tr>
+
         <td>${item.name}</td>
-        <td>$${item.price.toFixed(2)}</td>
+
+        <td>P${item.price.toFixed(2)}</td>
 
         <td>
+
           <div class="quantity-controls">
 
             <button class="quantity-btn decrease-btn"
@@ -178,27 +174,31 @@ function renderCheckout() {
             </button>
 
           </div>
+
         </td>
 
-        <td>$${itemTotal.toFixed(2)}</td>
+        <td>P${itemTotal.toFixed(2)}</td>
 
         <td>
+
           <button class="remove-btn"
             data-index="${index}">
             Remove
           </button>
+
         </td>
+
       </tr>
     `;
   });
 
-  grandTotalElement.textContent = `$${grandTotal.toFixed(2)}`;
+  grandTotalElement.textContent = `P${grandTotal.toFixed(2)}`;
 
   updateCartButtons();
 }
 
 /* =========================
-   UPDATE BUTTON EVENTS
+   UPDATE CART BUTTONS
 ========================= */
 
 function updateCartButtons() {
@@ -206,6 +206,8 @@ function updateCartButtons() {
   const increaseButtons = document.querySelectorAll(".increase-btn");
   const decreaseButtons = document.querySelectorAll(".decrease-btn");
   const removeButtons = document.querySelectorAll(".remove-btn");
+
+  /* Increase Quantity */
 
   increaseButtons.forEach(button => {
 
@@ -221,6 +223,8 @@ function updateCartButtons() {
     });
   });
 
+  /* Decrease Quantity */
+
   decreaseButtons.forEach(button => {
 
     button.addEventListener("click", () => {
@@ -228,7 +232,12 @@ function updateCartButtons() {
       const index = button.dataset.index;
 
       if (cart[index].quantity > 1) {
+
         cart[index].quantity -= 1;
+
+      } else {
+
+        cart.splice(index, 1);
       }
 
       localStorage.setItem("cart", JSON.stringify(cart));
@@ -236,6 +245,8 @@ function updateCartButtons() {
       renderCheckout();
     });
   });
+
+  /* Remove Product */
 
   removeButtons.forEach(button => {
 
@@ -252,25 +263,34 @@ function updateCartButtons() {
   });
 }
 
+/* =========================
+   LOAD CHECKOUT
+========================= */
+
 renderCheckout();
 
 /* =========================
    CONFIRM ORDER
 ========================= */
 
-const confirmOrderBtn = document.getElementById("confirm-order-btn");
+const confirmOrderBtn =
+  document.getElementById("confirm-order-btn");
 
 if (confirmOrderBtn) {
 
   confirmOrderBtn.addEventListener("click", () => {
 
     if (cart.length === 0) {
+
       alert("Your cart is empty.");
+
       return;
     }
 
-    document.getElementById("success-message")
-      .classList.remove("d-none");
+    const successMessage =
+      document.getElementById("success-message");
+
+    successMessage.classList.remove("d-none");
 
     localStorage.removeItem("cart");
 
@@ -279,7 +299,9 @@ if (confirmOrderBtn) {
     renderCheckout();
 
     setTimeout(() => {
-      window.location.href = "history.html";
+
+      window.location.href = "purchases-history.html";
+
     }, 3000);
   });
 }
